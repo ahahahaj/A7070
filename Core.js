@@ -83,37 +83,37 @@ const {
 //
         if(time2 < "23:59:00"){
 
-        var nowtime = 'Good night 🌌'
+        var nowtime = 'ليلة سعيدة 🌌'
 
 }
 
         if(time2 < "19:00:00"){
 
-        var nowtime = 'Good afternoon 🌆'
+        var nowtime = 'صباح  🌆'
 
 }
 
         if(time2 < "18:00:00"){
 
-        var nowtime = 'Good afternoon 🌇'
+        var nowtime = 'صباح 🌇'
 
 }
 
         if(time2 < "15:00:00"){
 
-        var nowtime = 'Good afternoon 🏞'
+        var nowtime = 'ظهر 🏞'
 
 }
 
         if(time2 < "11:00:00"){
 
-        var nowtime = 'Good morning 🌅'
+        var nowtime = 'صباح 🌅'
 
 }
 
         if(time2 < "05:00:00"){
 
-        var nowtime = 'Good night 🏙'
+        var nowtime = 'مساء 🏙'
 
 }
 
@@ -625,42 +625,42 @@ if (smallinput.includes('hello')) {
 
 // } 
 
-if (smallinput=='kai') {
-    reply (`My Boss is lost in another Multiverse, and I lost the connection with him...`)
+if (smallinput=='لايت') {
+    reply (`لقد ضاع رئيسي في أكواخ متعددة أخرى، وفقدت الاتصال به...`)
 }
 
 
 if (smallinput=='runtime') {
-  reply (`Hey ${pushname} my runtime is ${runtime(process.uptime())}\n\nCurrent Time: ${kaitime}\n\nCurrent Date: ${kaidate}`)
+  reply (`هلا ${pushname} وقت التشغيل الخاص بي هو ${runtime(process.uptime())}\n\nالوقت الحالي: ${kaitime}\n\nالتاريخ الحالي: ${kaidate}`)
 }
 
 
 
-if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
-  reply (`Konichiwa ${pushname}, I am ${BotName}. How can i help you?`);
+if( smallinput.includes('بوت') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
+  reply (`نعم ${pushname}, انا  ${BotName}. كيف تبغاني اساعدك يقلبي?`);
 }
 
 
-if (smallinput=='a17') {
-    reply ('Yes I am Alive 🫂')
+if (smallinput=='زيرو تو') {
+    reply ('لسه صاحيه لاتخاف او خاف شوي هههههه 🫂')
 }
 
-if (smallinput=='sasha') {
-  reply ('Only you...🫶🏻')
+if (smallinput=='احبك') {
+  reply ('اعشقك...🫶🏻')
 }
 
 if (smallinput=='ping') {
-    reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
+    reply (`هلا ${pushname} السرعه ${latensie.toFixed(4)} ms`)
 }
 
 
-if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
-  reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
+if (smallinput.includes('صباح الخير') || smallinput.includes('ohayo')) {
+  reply (`صباح الخير لك أيضا ${pushname} ☺️. استمتع بيوم رائع 😇.`);
 }
 
-if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
+if (smallinput.includes('مساء الفل') || smallinput.includes('konnichiwa')) {
 
-  reply (`Good afthernoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
+  reply (`صباح الخير اليك ايضا ${pushname} ✨. أتمنى لك ظهيرة ممتعة أيضا 😇🤞🏻.`);
 
 }
 
@@ -670,12 +670,12 @@ if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) 
 //   }
 
 
-if (smallinput.includes('good night')) {
-  reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
+if (smallinput.includes('مساء الخير')) {
+  reply (`طابت ليلتك أيضا ${pushname} 😇. نم جيدا وأحلام سعيدة.`);
 }
 
 if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-  reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
+  reply ('لا تمنشن يا ${pushname} 😇. أنا روبوت بعد كل شيء.`);
 }
 
 
@@ -695,8 +695,8 @@ if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinp
     if (isBanChat) return reply(mess.bangc)
     A17.sendMessage(from, { react: { text: "❤" , key: m.key }})
     
-    let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
-    teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+    let { data } = await axios.get('https://api.github.com/repos/صدقت يهطف ههههه');
+    teks = `*Zero Two Script*\n\n*عدد النجوم*: ${data.stargazers_count}⭐\n*عدد الفورك*: ${data.forks_count} فورك\n*GitHub*: https://github.com/صدقت يهطف ههههه\n\nاحم *ادخل قروب البوت* https://chat.whatsapp.com/IhYY2vOmbSJJZpKimQ9ydO. `
   /*  let buttons = [
     {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
     ] */
@@ -708,7 +708,7 @@ if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinp
     buttons: buttons,
     headerType: 4, */
     contextInfo:{externalAdReply:{
-    title:"Powered by Kai",
+    title:"صنع بواسطه لايت",
     body: " ", 
     thumbnail: fs.readFileSync("Assets/pic2.jpg"),
     mediaType:1,
@@ -729,7 +729,7 @@ if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinp
       if (isBanChat) return reply(mess.bangc);
 
       A17.sendMessage(from, { react: { text: "💫" , key: m.key }})
-    reply(`⚙ *My developer's group:* ⚙ http://gg.gg/12ewfs`)
+    reply(`⚙ *مجموعة المطور الخاص بي:* ⚙ https://chat.whatsapp.com/IhYY2vOmbSJJZpKimQ9ydO`)
     }
     break;
     
@@ -739,12 +739,12 @@ case 'repo': case 'botrepo': {
   if (isBanChat) return reply(mess.bangc);
   
   A17.sendMessage(from, { react: { text: "💫" , key: m.key }})
-    reply(`⚙ My Source Code is </> - https://github.com/Kai0071/A17`)
+    reply(`⚙ السورس  الخاص بي أناs </> - https://github.com/صدقت يهطف ههههه`)
     }
     break;
 
 
-    case 'owner': case 'creator': case 'mod': case '🎮': case 'mods': {
+    case 'owner': case 'creator': case 'mod': case '🎮': case 'المطور': {
       if (isBan) return reply(mess.banned); 			
       if (isBanChat) return reply(mess.bangc);
       
@@ -761,9 +761,9 @@ case 'repo': case 'botrepo': {
         if (!isCreator) return reply(mess.owner)
         A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 
-              if (!quoted) return `*Send/Reply Image With Caption* ${prefix + command}`
-              if (!/image/.test(mime)) return `*Send/Reply Image With Caption* ${prefix + command}`
-              if (/webp/.test(mime)) return `*Send/Reply Image With Caption* ${prefix + command}`
+              if (!quoted) return `*إرسال/رد على الصورة مع التسمية التوضيحية* ${prefix + command}`
+              if (!/image/.test(mime)) return `*إرسال/رد على الصورة مع التسمية التوضيحية* ${prefix + command}`
+              if (/webp/.test(mime)) return `*إرسال/رد على الصورة مع التسمية التوضيحية* ${prefix + command}`
               let media = await A17.downloadAndSaveMediaMessage(quoted)
               await A17.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
               m.reply(mess.jobdone)
@@ -787,7 +787,7 @@ case 'repo': case 'botrepo': {
       pm2.restart('index', (err) => {
         if (err) {
           A17.sendMessage(from, { react: { text: "❌", key: m.key } });
-          A17.sendMessage(from, { text: 'Restarting Failed!'});
+          A17.sendMessage(from, { text: 'فشلت إعادة التشغيل!'});
         } else {
           return;
         }
@@ -796,39 +796,39 @@ case 'repo': case 'botrepo': {
 
 
       //
-      case 'shutdown': case 'sleep':
+      case 'shutdown': case 'نامي':
         if (!isCreator) return reply(mess.owner)
         if (isBanChat) return reply(mess.bangc)
         if (!isCreator) return reply(mess.owner)
         await A17.sendMessage(from, { react: { text: "⚠️" , key: m.key }})
 
-        reply(`Okey bye time to sleep!`)
+        reply(`حسنا، إلى اللقاء، حان وقت النوم!`)
         await sleep(5000)
         process.exit()
         break;
 
 
-      case 'public': {
+      case 'عام': {
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         if (!isCreator) return reply(mess.owner)
         A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
         
         A17.public = true
-        reply('I am now Publicly accessable!')
+        reply('أنا الآن متاح للجمهور!')
         A17.setStatus(`Mode : Public`)
         }
         break;
         
 
-        case 'self': {
+        case 'قفل_بوت': {
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         if (!isCreator) return reply(mess.botowner)
         
         A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
         A17.public = false
-        reply('Only Owner can use me now!')
+        reply('يمكن للمالك فقط استخدامي الآن!')
         A17.setStatus(`Mode : Self`)
         }
         break;
