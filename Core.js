@@ -6230,24 +6230,24 @@ break;
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- if (args[0] === "on") {
+ if (args[0] === "فتح") {
  if (AntiLinkAll) return replay('Already activated')
  ntilinkall.push(from)
- replay('Enabled all antilink !')
+ replay('تم تمكين جميع الروابط المضادة !')
  var groupe = await A17.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- A17.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
- } else if (args[0] === "off") {
- if (!AntiLinkAll) return replay('Already deactivated')
+ A17.sendMessage(from, {text: `\`\`\`「 تحذير 」\`\`\`\n\nتم تنشيط نظام Antilink!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ } else if (args[0] === "قفل") {
+ if (!AntiLinkAll) return replay('تم إلغاء تنشيطه بالفعل')
  let off = ntilinkall.indexOf(from)
  ntilinkall.splice(off, 1)
- replay('Disabled all antilink !')
+ replay('تعطيل جميع الروابط المضادة !')
  } else {
-   let textmsg = 'Type ' + `${prefix}${command}` + ' on to turn on antilink feature or Type ' + `${prefix + command}` + ' off to turn off antilink feature'
+   let textmsg = 'اكتب ' + `${prefix}${command}` + ' لتشغيل ميزة مكافحة الروابط أو النوع ' + `${prefix + command}` + ' off to turn off antilink feature'
    await A17.sendMessage(m.chat, { text: `${textmsg}`}, `${global.BotName}`, m)
    }
    }
@@ -6274,9 +6274,9 @@ break;
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
     if (!isCreator) return replay(mess.botowner)
-    if (!args.join(" ")) return replay(`Please enter some text to broadcast! \n\nExample : ${prefix + command} ${global.OwnerName}`)
+    if (!args.join(" ")) return replay(`يرجى إدخال بعض النصوص الرساله الجماعيه! \N\nمثال : ${prefix + command} ${global.OwnerName}`)
     let anu = await store.chats.all().map(v => v.id)
-    replay(`Send Broadcast To ${anu.length} Chat\nTime's up ${anu.length * 1.5} second`)
+    replay(`ارسال الرساله الجماعيه الى ${anu.length} الدردشة\nالوقت انتهى ${anu.length * 1.5} ثانيه`)
     for (let yoi of anu) {
     await sleep(1500)
     let btn = [{
@@ -6290,10 +6290,10 @@ break;
     id: '-owner'
     }
     }]
-    let txt = `「 *${global.OwnerName}'s Broadcast* 」\n\n${text}`
+    let txt = `「 *${global.OwnerName}'s رساله جماعية* 」\n\n${text}`
     A17.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
     }
-    replay('Broadcast Sent !')
+    replay('تم إرسال البرودكاست !')
     }
     break;    
     
@@ -6308,13 +6308,13 @@ break;
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
     A17.sendMessage(from, { react: { text: "✨" , key: m.key }})      
-    const helpmenu = `Hemlo *${pushname}* Dear...!! ${nowtime} ,
+    const helpmenu = `مرحبا *${pushname}* استاذ.!! ${nowtime} ,
     
-Hemlo, I am "A17" a WhatsApp bot create and recode by Kai to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+هلا, أنا "زيرو تو بوت 🤖" روبوت WhatsApp يقوم بإنشاء وإعادة ترميز لايت للقيام بكل ما هو ممكن|  المطور WhatsApp استنادا إلى دعم WhatsApp Multi Device (MD).
   
 
-    ⌯    *Time* : ${kaitime}
-    ⌯    *Date* : ${kaidate}
+    ⌯    *الساعه* : ${kaitime}
+    ⌯    *اليوم* : ${kaidate}
 
 
     〢━━━ 〄 Bot Info 〄 ━━━〢
@@ -6601,26 +6601,26 @@ Hemlo, I am "A17" a WhatsApp bot create and recode by Kai to do everything that 
     〢━━━ ⚠️ *NSFW* ⚠️ ━━━〢
    
    
-    ⌯    🍁 Type "*${prefix}nsfw*" then enable 
-    ⌯       NSFW (Admin only!)
+    ⌯    🍁 اكتب "*${prefix}nsfw*" ثم قم بتمكين
+    ⌯ NSFW (المشرفين فقط!)
     ⌯    
-    ⌯    🍁 Then type "*${prefix}nsfwmenu*" for
-    ⌯       all NSFW commands.
+    ⌯    🍁 ثم اكتب "*${prefix}nsfwmenu*" ل
+    ⌯ جميع أوامر NSFW.         اللهم اني خالي من ذنوب من يستخدم ذا الامر
     ⌯    
     ⌯    『  *${global.BotName}*  』
-    ⌯       Developed By: *Kai*
+    ⌯       Developed By: *𝙻𝚒𝚐𝚑𝚝 🧠*
     ⌯    
-    ⌯    🍁 To use any of these
-    ⌯       commands type.
+    ⌯    🍁 لاستخدام أي من هذه
+    ⌯ نوع الأوامر.
     ⌯    
-    ⌯    "*${prefix}<Command name>*".
+    ⌯    "*${prefix}<اسم الامر>*".
     ⌯    
-    ⌯    🍁 To get Support Group link
-    ⌯     type "*${prefix}support*".
+    ⌯    🍁 للحصول على رابط مجموعة الدعم
+    ⌯     اكتب "*${prefix}support*".
     ⌯    
     ⌯    
-    ⌯    🍁 Type "*${prefix}help*" to get
-    ⌯       full command list.
+    ⌯    🍁 اكتب "*${prefix}help*" للحصول على
+    ⌯ قائمة الأوامر الكاملة.
     ┬│▸
     ╰────────────···▸`
             let buttonMessage = {
@@ -6641,7 +6641,7 @@ Hemlo, I am "A17" a WhatsApp bot create and recode by Kai to do everything that 
         if (isBanChat) return reply(mess.bangc)
         A17.sendMessage(from, { react: { text: "✨" , key: m.key }})
             
-     reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
+     reply(`هل تحتاج إلى أي مساعدة؟ ${pushname} ? اكتب *${prefix}help* للحصول على قائمة الأوامر الكاملة الخاصة بي.`)
         }
         
     break; 
@@ -6654,14 +6654,14 @@ Hemlo, I am "A17" a WhatsApp bot create and recode by Kai to do everything that 
       if (!m.isGroup) return replay(mess.grouponly)
 A17.sendMessage(from, { react: { text: "🍁" , key: m.key }})
   
-  reply(`Running repl....Please wait until repl.it responds...`)						
+  reply(`تشغيل الاستبدال.... من فضلك انتظر حتى يستجيب repl.it...`)						
   var replqr =  await getBuffer(`https://a17-qr-scanner.broken0007.repl.co/`)
                      /*        var qrbutton = [
           {buttonId: `${prefix}qr`, buttonText: {displayText: `Tap to Re-run Repl`}, type: 1}
           ] */
         let bmffg = {
          image: replqr,
-         caption:  `Scan the qr within 10-15 seconds...`,
+         caption:  `امسح qr في غضون 10-15 ثانية...`,
     /*    footer: `${global.BotName}`,
         buttons: qrbutton,
         headerType: 4 */
@@ -6677,10 +6677,10 @@ A17.sendMessage(from, { react: { text: "🍁" , key: m.key }})
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         A17.sendMessage(from, { react: { text: "✨", key: m.key }}) 
-        if (!args[0]) return reply("Enter your location to search weather.")
+        if (!args[0]) return reply("أدخل موقعك للبحث عن الطقس.")
         myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
 
-        const weathertext = `           🌤 *Weather Report* 🌤  \n\n🔎 *Search Location:* ${myweather.data.name}\n*💮 Country:* ${myweather.data.sys.country}\n🌈 *Weather:* ${myweather.data.weather[0].description}\n🌡️ *Temperature:* ${myweather.data.main.temp}°C\n❄️ *Minimum Temperature:* ${myweather.data.main.temp_min}°C\n📛 *Maximum Temperature:* ${myweather.data.main.temp_max}°C\n💦 *Humidity:* ${myweather.data.main.humidity}%\n🎐 *Wind:* ${myweather.data.wind.speed} km/h\n`
+        const weathertext = `           🌤 *تقرير الطقس* 🌤  \n\n🔎 *ابحث عن الموقع:* ${myweather.data.name}\n*💮 الدوله:* ${myweather.data.sys.country}\n🌈 *الطقس:* ${myweather.data.weather[0].description}\n🌡️ *الحراره:* ${myweather.data.main.temp}°C\n❄️ *درجة الحرارة الادنى:* ${myweather.data.main.temp_min}°C\n📛 *اكبر درجه حرارهe:* ${myweather.data.main.temp_max}°C\n💦 *رطوبة:* ${myweather.data.main.humidity}%\n🎐 *ريح:* ${myweather.data.wind.speed} km/h\n`
         A17.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertext }, { quoted: m })
 
         break;
@@ -6748,7 +6748,7 @@ A17.sendMessage(from, { react: { text: "🍁" , key: m.key }})
           if (isBan) return reply(mess.banned)	 			
           if (isBanChat) return reply(mess.bangc)
           A17.sendMessage(from, { react: { text: "❌", key: m.key }}) 
-          reply (`Hey *${pushname}* senpai! this command are not programmed! Type *${prefix}help* to get my full command list!`)
+          reply (`يخوي *${pushname}* الامر ذا مب موجود او خربان! اكتب *${prefix}help* عشان تشوف القائمه كامله!`)
   
       }	 			
   
